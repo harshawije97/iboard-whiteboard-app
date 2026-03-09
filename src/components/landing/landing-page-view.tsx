@@ -112,10 +112,14 @@ function LandingPageView() {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <Button variant="ghost" className="text-sm font-medium hidden sm:inline-flex">Log in</Button>
-                        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-medium rounded-full px-6">
-                            Try for free
-                        </Button>
+                        <a href="/trial">
+                            <Button variant="ghost" className="text-sm font-medium hidden sm:inline-flex">Log in</Button>
+                        </a>
+                        <a href="/try-demo">
+                            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-medium rounded-full px-6">
+                                Try for free
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </header>
