@@ -10,22 +10,20 @@ function ApplicationLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className='w-full min-h-screen'>
-            <ClerkProvider>
-                <ConvexClientProvider>
-                    <AppSidebar />
-                    <div className='pl-15 h-full'>
-                        <div className="flex gap-x-3 h-full">
-                            <OrganizationSidebar />
-                            <div className='h-full flex-1'>
-                                <DashboardNavbar />
-                                {children}
-                            </div>
+        <ClerkProvider>
+            <ConvexClientProvider>
+                <AppSidebar />
+                <div className='pl-15 h-full'>
+                    <div className="flex gap-x-3 h-full">
+                        <OrganizationSidebar />
+                        <div className='h-full flex-1'>
+                            <DashboardNavbar />
+                            {children}
                         </div>
                     </div>
-                </ConvexClientProvider>
-            </ClerkProvider>
-        </div>
+                </div>
+            </ConvexClientProvider>
+        </ClerkProvider>
     )
 }
 
