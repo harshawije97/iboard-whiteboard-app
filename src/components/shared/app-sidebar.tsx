@@ -6,7 +6,7 @@ import OrganizationList from '../organization/org-list';
 
 function AppSidebar() {
     return (
-        <aside className='fixed z-1 left-0 border-r border-slate-400 h-full w-16 max-w-15 flex flex-col p-3 gap-y-4 text-slate-50'>
+        <aside className='fixed z-1 left-0 border-r border-slate-400/30 h-full w-16 max-w-15 flex flex-col p-3 gap-y-4 text-slate-50'>
             <OrganizationList />
             <NewActionButton />
         </aside>
