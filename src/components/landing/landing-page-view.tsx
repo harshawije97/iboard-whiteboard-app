@@ -3,6 +3,8 @@
 import { Button } from '../ui/button';
 import { ArrowRight, BarChart3, CheckCircle, Headset, Lock, Palette, Share2, Users, Zap } from 'lucide-react';
 import { Card } from '../ui/card';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const features = [
     {
@@ -98,8 +100,8 @@ function LandingPageView() {
             <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
                 <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-7xl">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <span className="text-primary-foreground font-bold text-lg">i</span>
+                        <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
+                            <Image src="/logo.svg" alt="logo" width={32} height={32} priority />
                         </div>
                         <span className="text-xl font-bold text-foreground">iBoard</span>
                     </div>
@@ -112,9 +114,9 @@ function LandingPageView() {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <a href="/trial">
+                        <Link href="/trial">
                             <Button variant="ghost" className="text-sm font-medium hidden sm:inline-flex">Log in</Button>
-                        </a>
+                        </Link>
                         <a href="/try-demo">
                             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-medium rounded-full px-6">
                                 Try for free
@@ -322,7 +324,7 @@ function LandingPageView() {
                     <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row items-center justify-between">
                         <div className="flex items-center gap-2 mb-4 md:mb-0">
                             <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
-                                <span className="text-primary-foreground font-bold text-sm">i</span>
+                                <Image src="/logo.svg" alt="logo" width={32} height={32} priority />
                             </div>
                             <span className="font-bold text-foreground">iBoard</span>
                         </div>
