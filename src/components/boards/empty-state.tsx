@@ -11,7 +11,7 @@ function EmptyState() {
                 <Empty>
                     <EmptyHeader>
                         <EmptyMedia variant="default">
-                            <Image priority src={"/images/empty.jpg"} alt="logo" width={650} height={650} />
+                            <Image priority src={"/images/empty.png"} alt="logo" width={650} height={650} />
                         </EmptyMedia>
                         <EmptyTitle className='lg:text-2xl text-xl font-semibold text-primary'>Welcome to iBoard</EmptyTitle>
                         <EmptyDescription className='text-xs sm:text-sm'>New organization is required before your creativity</EmptyDescription>
@@ -33,7 +33,7 @@ export function EmptyBoards() {
                 <Empty>
                     <EmptyHeader>
                         <EmptyMedia variant="default">
-                            <Image priority src={"/images/empty.jpg"} alt="logo" width={650} height={650} />
+                            <Image priority src={"/images/no_boards.png"} alt="logo" width={650} height={650} />
                         </EmptyMedia>
                         <EmptyTitle className='lg:text-2xl text-xl font-semibold text-primary'>No Boards Found</EmptyTitle>
                         <EmptyDescription className='text-xs sm:text-sm'>Your organization has no boards to begin with</EmptyDescription>
@@ -56,7 +56,7 @@ export function EmptyFavorites() {
                 <Empty>
                     <EmptyHeader>
                         <EmptyMedia variant="default">
-                            <Image priority src={"/images/empty.jpg"} alt="logo" width={650} height={650} />
+                            <Image priority src={"/images/favorites.png"} alt="logo" width={650} height={650} />
                         </EmptyMedia>
                         <EmptyTitle className='lg:text-2xl text-xl font-semibold text-primary'>No Favorite Boards</EmptyTitle>
                         <EmptyDescription className='text-xs sm:text-sm'>Mark your favorite boards</EmptyDescription>
@@ -75,7 +75,7 @@ export function EmptySearchBoards() {
                 <Empty>
                     <EmptyHeader>
                         <EmptyMedia variant="default">
-                            <Image priority src={"/images/empty.jpg"} alt="logo" width={650} height={650} />
+                            <Image priority src={"/images/search_2.png"} alt="logo" width={650} height={650} />
                         </EmptyMedia>
                         <EmptyTitle className='lg:text-2xl text-xl font-semibold text-primary'>Search Results Not Found</EmptyTitle>
                     </EmptyHeader>
