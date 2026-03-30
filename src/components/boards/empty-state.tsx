@@ -16,6 +16,8 @@ import { useOrganization } from "@clerk/nextjs";
 import { LoaderCircleIcon, LoaderIcon } from "lucide-react";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import SuccessAnimation from "../shared/animations";
+import { toast } from "sonner";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function EmptyState() {
   // Create a new board
@@ -68,7 +70,28 @@ export function EmptyBoards() {
     mutate({
       orgId: organization.id,
       title: "Untitled",
-    });
+    })
+      .then(() => {
+        toast.success("Board created successfully", {
+          position: "top-center",
+          style: {
+            color: "oklch(37.2% 0.044 257.287)",
+          },
+          icon: (
+            <DotLottieReact
+              src="https://lottie.host/66efdb46-ac4d-4cf7-a578-2aa313e95840/DbhgLVU6lu.lottie"
+              autoplay
+              width={500}
+              height={500}
+            />
+          ),
+        });
+      })
+      .catch((err) => {
+        toast.error("Failed to create board", {
+          description: String(err.message),
+        });
+      });
   };
   return (
     <>
@@ -103,7 +126,9 @@ export function EmptyBoards() {
                   <LoaderCircleIcon className="mr-1 size-4.25 animate-spin text-slate-700" />
                   Creating
                 </>
-              ): "Create New Board"}
+              ) : (
+                "Create New Board"
+              )}
             </Button>
           </EmptyContent>
         </Empty>
